@@ -1,6 +1,6 @@
-Array.prototype.customIncludes = function (inputElement) {
+Array.prototype.customIncludes = function (inputElement, fromIndex) {
   console.log(inputElement, this);
-  for(let i = 0; i < this.length; i++){
+  for(let i = fromIndex; i < this.length; i++){
     if(this[i] === inputElement){
         return true
     }
@@ -9,7 +9,7 @@ Array.prototype.customIncludes = function (inputElement) {
 };
 
 
-let arr = [1, 2, 3, 4, 5];
+let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-let retVal = arr.customIncludes(1);
+let retVal = arr.customIncludes(4,2);
 console.log(retVal);
