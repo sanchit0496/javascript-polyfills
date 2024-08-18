@@ -30,6 +30,10 @@ This guide covers essential JavaScript polyfills that are important to understan
 
 ## 2. Object Methods
 
+### `Object.create()`
+- **Purpose**: Creates a new object with the specified prototype object and properties.
+- **Use Case**: Understanding prototypal inheritance in JavaScript and creating objects with a specific prototype.
+
 ### `Object.entries()`
 - **Purpose**: Returns an array of a given object's own enumerable property `[key, value]` pairs.
 - **Use Case**: Converting an object into an array to iterate over keys and values.
@@ -101,12 +105,7 @@ This guide covers essential JavaScript polyfills that are important to understan
 - **Purpose**: Allows unpacking values from arrays or properties from objects into distinct variables.
 - **Use Case**: Common in modern JavaScript for cleaner and more concise code.
 
-## 9. `requestAnimationFrame`
-
-- **Purpose**: Schedules a function to run at the next available screen repaint, improving performance and visual smoothness.
-- **Use Case**: Optimizing animations and avoiding unnecessary work during browser reflows.
-
-## 10. `Set` and `Map`
+## 9. `Set` and `Map`
 
 ### `Set`
 - **Purpose**: Stores unique values of any type.
@@ -115,8 +114,3 @@ This guide covers essential JavaScript polyfills that are important to understan
 ### `Map`
 - **Purpose**: Stores key-value pairs and remembers the original insertion order of the keys.
 - **Use Case**: Managing collections of keyed data where the keys can be of any type.
-
-## 11. `Object.create()`
-
-- **Purpose**: Creates a new object with the specified prototype object and properties.
-- **Use Case**: Understanding prototypal inheritance in JavaScript and creating objects with a specific prototype.
