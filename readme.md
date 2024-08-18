@@ -56,10 +56,6 @@ This guide covers essential JavaScript polyfills that are important to understan
 - **Purpose**: Determines whether a string begins with the specified characters.
 - **Use Case**: Checking if a URL or path starts with a particular prefix.
 
-### `String.prototype.trim()`
-- **Purpose**: Removes whitespace from both ends of a string.
-- **Use Case**: Cleaning up user input before processing or storage.
-
 ## 4. Promise Polyfills
 
 ### `Promise`
