@@ -30,10 +30,6 @@ This guide covers essential JavaScript polyfills that are important to understan
 
 ## 2. Object Methods
 
-### `Object.assign()`
-- **Purpose**: Copies enumerable own properties from one or more source objects to a target object.
-- **Use Case**: Merging objects into one, such as combining configuration objects.
-
 ### `Object.entries()`
 - **Purpose**: Returns an array of a given object's own enumerable property `[key, value]` pairs.
 - **Use Case**: Converting an object into an array to iterate over keys and values.
@@ -41,6 +37,10 @@ This guide covers essential JavaScript polyfills that are important to understan
 ### `Object.values()`
 - **Purpose**: Returns an array of a given object's own enumerable property values.
 - **Use Case**: Extracting all values from an object for operations like summing them up.
+
+### `Object.assign()`
+- **Purpose**: Copies enumerable own properties from one or more source objects to a target object.
+- **Use Case**: Merging objects into one, such as combining configuration objects.
 
 ## 3. String Methods
 
@@ -65,6 +65,10 @@ This guide covers essential JavaScript polyfills that are important to understan
 ### `Promise.finally()`
 - **Purpose**: Executes a callback function when a promise is settled, regardless of its outcome.
 - **Use Case**: Releasing resources or resetting states after an asynchronous operation.
+
+### `Promise.all()`
+- **Purpose**: Allows you to execute multiple promises concurrently and aggregate their results into a single promise. This combined promise resolves when all of the input promises have resolved, or it rejects if any of the input promises reject.
+- **Use Case**: When you need to perform multiple asynchronous operations concurrently and only proceed once all of them are complete, such as fetching data from multiple APIs and combining the results.
 
 ## 5. Function Methods
 
