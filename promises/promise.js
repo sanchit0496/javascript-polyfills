@@ -49,6 +49,19 @@ function customPromise(executor) {
   }
 }
 
+customPromise.prototype.finally = function(callback){
+    return this.then(
+        value => {
+            callback()
+            return value
+        },
+        reason => {
+            callback()
+            throw reason
+        }
+    )
+}
+
 const promiseExecutor = new customPromise((resolve, reject) => {
   setTimeout(() => {
     console.log("called");
@@ -62,4 +75,6 @@ promiseExecutor
   })
   .catch((err) => {
     console.log(err);
-  });
+  }).finally(() => {
+    console.log('Finally called');  // "Finally called" after 2 seconds
+  })
