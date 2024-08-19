@@ -90,18 +90,12 @@ This guide covers essential JavaScript polyfills that are important to understan
 - **Purpose**: Creates a new array from an array-like or iterable object.
 - **Use Case**: Converting NodeLists or other iterable objects into arrays for manipulation.
 
-## 7. Number Methods
-
-### `Number.isNaN()`
-- **Purpose**: Determines whether the passed value is `NaN` and its type is `Number`.
-- **Use Case**: More reliable than the global `isNaN` function, which converts the argument to a number first.
-
-## 8. Destructuring (via Babel)
+## 7. Destructuring (via Babel)
 
 - **Purpose**: Allows unpacking values from arrays or properties from objects into distinct variables.
 - **Use Case**: Common in modern JavaScript for cleaner and more concise code.
 
-## 9. `Set` and `Map`
+## 8. `Set` and `Map`
 
 ### `Set`
 - **Purpose**: Stores unique values of any type.
