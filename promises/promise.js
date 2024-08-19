@@ -9,7 +9,7 @@ function customPromise(executor) {
   function resolve(val) {
     fulfilled = true;
     returnVal = val;
-    if (typeof val === "Function") {
+    if (typeof onResolve === "function") {
       onResolve(returnVal);
       called = true;
     }
@@ -18,7 +18,7 @@ function customPromise(executor) {
   function reject(val) {
     rejected = true;
     returnVal = val;
-    if (typeof val === "Function") {
+    if (typeof onReject === "function") {
       onReject(returnVal);
       called = true;
     }
@@ -28,7 +28,7 @@ function customPromise(executor) {
     onResolve = callback;
     if (fulfilled && !called) {
       called = true;
-      onResolve(value);
+      onResolve(returnVal);
     }
     return this;
   };
@@ -37,7 +37,7 @@ function customPromise(executor) {
     onReject = callback;
     if (rejected && !called) {
       called = true;
-      onReject(value);
+      onReject(returnVal);
     }
     return this;
   };
@@ -52,6 +52,7 @@ function customPromise(executor) {
 const promiseExecutor = new customPromise((resolve, reject) => {
   setTimeout(() => {
     console.log("called");
+    resolve("Promise Resolved")
   }, 2000);
 });
 
