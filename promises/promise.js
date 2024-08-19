@@ -49,6 +49,7 @@ function customPromise(executor) {
   }
 }
 
+// this take care of finally method
 customPromise.prototype.finally = function(callback){
     return this.then(
         value => {
