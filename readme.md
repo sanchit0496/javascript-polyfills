@@ -80,22 +80,7 @@ This guide covers essential JavaScript polyfills that are important to understan
 - **Purpose**: Invokes a function with a specific `this` context and arguments provided individually (`call`) or as an array (`apply`).
 - **Use Case**: Manually setting `this` and passing arguments to a function.
 
-## 6. ES6+ Features
-
-### `fetch()`
-- **Purpose**: Provides a modern interface for making HTTP requests, replacing the older `XMLHttpRequest`.
-- **Use Case**: Fetching data from APIs and handling responses using Promises.
-
-### `Array.from()`
-- **Purpose**: Creates a new array from an array-like or iterable object.
-- **Use Case**: Converting NodeLists or other iterable objects into arrays for manipulation.
-
-## 7. Destructuring (via Babel)
-
-- **Purpose**: Allows unpacking values from arrays or properties from objects into distinct variables.
-- **Use Case**: Common in modern JavaScript for cleaner and more concise code.
-
-## 8. `Set` and `Map`
+## 6. `Set` and `Map`
 
 ### `Set`
 - **Purpose**: Stores unique values of any type.
