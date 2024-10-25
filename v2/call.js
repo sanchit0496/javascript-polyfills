@@ -1,12 +1,25 @@
-const Game = {
-    name: 'cricket',
-    with: 'family'
+const person = {
+    name: "Aryan",
+
+    marks: 100
 }
 
-const intro = {
-    giveIntro: function(){
-        return this.name + " played best with your " + this.with
-    }
+function greet(subject){
+    console.log(`${this.name} scored ${this.marks} marks in ${subject}`)
 }
 
-console.log(intro.giveIntro.call(Game))
+Function.prototype.customCall = function(context  = {}, ...args){
+
+    context = context || window
+
+    context.fn = this
+
+    const res = context.fn(...args)
+    delete context.fn
+
+    return res;
+}
+
+
+greet.call(person, 'maths')
+greet.customCall(person, 'maths')
